@@ -1,0 +1,38 @@
+<h1>POST REQUEST RECEIVED!</h1>
+
+
+{{#if postData.length}}
+    <p>This is the URL data:</p>
+    <table>
+        <tr>
+        <th> Parameter: </th>
+        <th> Pair Value: </th>
+        </tr>
+    
+
+    {{#each postData}}
+        <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.value}}</td>
+        </tr>
+
+    {{/each}}
+    </table>
+{{/if}}
+
+{{#if postBody.length}}
+    <p>This is the BODY data:</p>
+    <table>
+        <tr>
+            <th>Parameter: </th>
+            <th>Pair Value: </th>
+        </tr>
+
+        {{#each postBody}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+        </tr>
+        {{/each}}
+    </table>
+{{/if}}

@@ -1,0 +1,19 @@
+<h1>GET REQUEST RECEIVED!</h1>
+
+<table>
+{{#if getData.length}}
+        <tr>
+        <th> Parameter: </th>
+        <th> Pair Value: </th>
+        </tr>
+    {{/if}}
+
+    {{#each getData}}
+        <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.value}}</td>
+        </tr>
+
+    {{/each}}
+
+</table>
